@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml" lang="RU">
+
+<head th:replace="blocks/header.html :: head"></head>
+<body>
+<div th:replace="blocks/header.html:: header"></div>
+
+
+<div class="container">
+    <div class="line">
+        <div class="site_left">
+            <a th:href="@{/download/yakimov_cv_eng.pdf}"><button class="button button1">CV ENG</button></a>
+            <a th:href="@{/download/yakimov_cv_rus.pdf}"><button class="button button1">CV RUS</button></a>
+            <div class="info_block">
+                <h2 class="info_block">SHORT INFORMATION</h2>
+                <p class="info_block" th:text="${short_information}">INFORMATION</p>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">SKILLS</h2>
+                <ul class="info_block">
+                    <li class="info_block" th:each="skill:${skills}">
+                        <span class="info_block" th:text="${skill.skillName}">SKILL</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">EDUCATION</h2>
+                <p class="info_block" th:each="education:${educations}" th:text="${education.education}">EDUCATION</p>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">LANGUAGES</h2>
+                <ul class="info_block">
+                    <li th:each="language:${languages}">
+                        <span th:text="${language.language}">language</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="info_block_contact">
+                <h2 class="info_block">HOW TO CONTACT ME</h2>
+                <div class="info_block" th:each="contact:${contacts}">
+                     <span class="info_block" style="background-color: yellow" th:text="${contact.name + ': ' + contact.data}">data</span>
+                </div>
+            </div>
+        </div>
+        <div class="site_right">
+            <div class="info_block">
+                <h2 class="info_block">WORK EXPERIENCE</h2>
+                <div class="work" th:each="job:${jobs}">
+                    <div class="work_label">
+                        <h3 class="work_name" th:text="${job.name}">NAME</h3>
+                        <h3 class="date" th:text="${job.date}">DATEs</h3>
+                    </div>
+                    <h3 class="as" th:text="${job.title}">TITLE</h3>
+                    <div class="work_describe">
+                        <p class="info_block" th:unless="job.description == null" th:text="${job.description}">DESCRIPTION</p>
+                        <ul class="info_block" th:unless="job.responsibilities == null">
+                            <li th:each="responsibility:${job.responsibilities}">
+                                <span th:text="${responsibility}">responsibility</span>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="form_div">
+        <h1 class="form_header">Write me!</h1>
+        <hr class="header">
+        <form th:object="${messageDto}" th:action="@{/message}" id="contactform" name="contact" method="post" >
+            <p class="note"><span class="req">*  </span>Fields with an asterisk are required</p>
+            <div class="row">
+                <label for="name">Your name<span class="req">*</span></label>
+                <input th:field="*{user}" type="text" name="name" id="name" class="txt" tabindex="1" placeholder="Your name" required>
+            </div>
+
+            <div class="row">
+                <label for="email">E-mail address<span class="req">*</span></label>
+                <input th:field="*{email}" type="email" name="email" id="email" class="txt" tabindex="2" placeholder="address@gmail.com" required>
+            </div>
+
+            <div class="row">
+                <label for="subject">Topic<span class="req">*</span></label>
+                <input th:field="*{topic}" type="text" name="subject" id="subject" class="txt" tabindex="3" placeholder="topic" required>
+            </div>
+
+            <div class="row">
+                <label  for="message">Message<span class="req">*</span></label>
+                <textarea th:field="*{message}" name="message" id="message" class="txtarea" tabindex="4" required></textarea>
+            </div>
+
+            <div class="row">
+                <img class="captcha-pic" id="captcha" th:src="@{/captcha}" />
+            </div>
+            <div class="row">
+                <input th:field="*{captchaCode}" type="text" name="captchaCode" class="captcha_input" placeholder="Enter code">
+                <small class="error" th:if="${#fields.hasErrors('captchaCode')}" th:errorclass="error" th:errors="*{captchaCode}">CaptchaCode Error</small>
+            </div>
+            <div class="row">
+                <input type="submit" id="submitbtn" name="submitbtn" tabindex="5" value="Send">
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer th:replace="blocks/footer.html :: footer"></footer>
+</body>
+</html>

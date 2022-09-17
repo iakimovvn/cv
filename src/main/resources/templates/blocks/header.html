@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml" lang="RU">
+
+<html lang="en">
+
+<head th:fragment="head">
+    <link rel="shortcut icon" href="/icons/favicon.png" type="image/png">
+    <title>CV Vladimir Yakimov</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" th:href="@{/bootstrap/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/cv.css}">
+
+</head>
+<header th:fragment="header">
+    <div class="container">
+        <div class="head_fon">
+            <img class="avatar" th:src="@{'/images/me.jpg'}"/>
+        </div>
+        <div class="name_div">
+            <h3 class="name">Vladimir Yakimov</h3>
+            <h4 class="job">JAVA DEVELOPER</h4>
+        </div>
+        <hr class="header">
+    </div>
+</header>

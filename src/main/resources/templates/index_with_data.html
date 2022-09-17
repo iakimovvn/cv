@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml" lang="RU">
+
+<head th:replace="blocks/header.html :: head"></head>
+<body>
+<div th:replace="blocks/header.html:: header"></div>
+
+
+<div class="container">
+    <div class="line">
+        <div class="site_left">
+            <div class="info_block">
+                <h2 class="info_block">SHORT INFORMATION</h2>
+                <p class="info_block">I have experience in the development and implementation of highload, clustered, fault-tolerant systems in java. I go in for sports, play the piano.</p>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">SKILLS</h2>
+                <ul class="info_block">
+                    <li>Java</li>
+                    <li>Python, bash</li>
+                    <li>Hadoop, Spark, Hive, Claudera</li>
+                    <li>Spring: Boot, Security,Web,JPA</li>
+                    <li>Jenkins, Ansible</li>
+                    <li>SQL, PostgreSQL, Liquibase</li>
+                    <li>OOP, SOLID, REST, SOUP</li>
+                    <li>JUnit, Mockito</li>
+                    <li>Linux</li>
+                    <li>Docker</li>
+                    <li>Git, Maven, Jira, JProfiler</li>
+                    <li>Team management</li>
+                    <li>Task scheduling</li>
+                </ul>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">EDUCATION</h2>
+                <p class="info_block">NI Mordovian State University N.P. Ogaryova, Saransk,<br/>
+                Faculty of Electronic Engineering,<br/>
+                Automated systems data processing and control. (2005 - 2010)</p>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">LANGUAGES</h2>
+                <ul class="info_block">
+                    <li>Russian - native</li>
+                    <li>English - B1(intermediate)</li>
+                </ul>
+            </div>
+            <div class="info_block">
+                <h2 class="info_block">HOW TO CONTACT ME</h2>
+                <p class="info_block">phone.: +7 (962) 595-73-09<br/>
+                e-mail: yakimovvn@bk.ru<br/>
+                addres: Moscow</p>
+            </div>
+        </div>
+        <div class="site_right">
+            <div class="info_block">
+                <h2 class="info_block">WORK EXPERIENCE</h2>
+                <div class="work">
+                    <div class="work_label">
+                        <h3 class="work_name">Sberbank - Technologies</h3>
+                        <h3 class="date">AUGUST 2020 - PRESENT</h3>
+                    </div>
+                    <h3 class="as">HEAD ENGINEER</h3>
+                    <div class="work_describe">
+                        <p class="info_block">I work on a project that is actively used in the bank to access big data. The main task of the service is to overwrite, encrypt and tokenize fields to which the user does not have access. At the moment, the cluster is deployed on 120 hosts and proxies petabytes of data every day.
+                            On the project:</p>
+                        <ul class="info_block">
+                            <li>I make complex features that affect the global behavior of the system. As well as features with a critical priority level.</li>
+                            <li>I actively participate in team management, create, supervise  and distribute tasks, help colleagues, conduct Code reviews, mentor interns. Participate in task planning, labor cost estimation.</li>
+                            <li>Replacing TeamLead during his absence.</li>
+                            <li>I manage releases in Jira. Conducting PSI, protecting the implementation of features from the Cyber ​​Security Experts. Supervise  release installation.</li>
+                            <li>I do a quick analysis of critical incidents. If necessary, we roll out the hotfix release in two hours.</li>
+                            <li>I'm doing load testing.</li>
+                            <li>I'm writing an ansible pipeline.</li>
+                            <li>Docker files for functional testing environment.</li>
+                        </ul>
+                    </div>
+            </div>
+
+
+
+            <div class="work">
+                <div class="work_label">
+                    <h3 class="work_name">ELAR Corporation</h3>
+                    <h3 class="date">January 2020 - August 2020</h3>
+                </div>
+                <h3 class="as">DEVELOPER</h3>
+                <div class="work_describe">
+                    <p class="info_block">Writing macros that adapt the elar-context system for certain tasks. Setting up and maintaining a context based on Tomcat with an environment (Elasticsearch, postgresql, OracleDb) on OS Linux.<br/>
+                        Support, refinement of the Spring backend of the National Electronic Library.</p>
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="work_label">
+                    <h3 class="work_name">Radius</h3>
+                    <h3 class="date">August 2019 - December 2019</h3>
+                </div>
+                <h3 class="as">DEVELOPER</h3>
+                <div class="work_describe">
+                    <p class="info_block">Development of a batch data loading framework.<br/>
+                        Writing modules for launching data upload processes using Spark, Hive, Sqoop.</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="blocks/footer.html :: footer"></footer>
+</body>
+</html>
