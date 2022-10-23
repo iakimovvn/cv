@@ -14,8 +14,7 @@ import static javax.persistence.GenerationType.IDENTITY;
  **/
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -26,6 +25,8 @@ public class Contact implements Serializable {
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "id")
     private UUID id;
+    @Column(name = "index")
+    private Integer index;
     @Column(name = "name")
     private String name;
     @Column(name = "data")

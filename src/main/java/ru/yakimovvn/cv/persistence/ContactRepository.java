@@ -8,5 +8,5 @@ import java.util.UUID;
 
 public interface ContactRepository extends JpaRepository<Contact, UUID> {
 
-    List<Contact> findAll();
+    List<Contact> findAllByOrderByIndex();
 }

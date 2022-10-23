@@ -13,8 +13,7 @@ import java.util.UUID;
  * cv
  **/
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -26,6 +25,8 @@ public class Job implements Serializable {
     @GeneratedValue
     @Column(name = "id")
     private UUID id;
+    @Column(name = "index")
+    private Integer index;
     @Column(name = "name")
     private String name;
     @Column(name = "title")

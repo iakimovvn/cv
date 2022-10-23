@@ -12,8 +12,7 @@ import java.util.UUID;
  **/
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode

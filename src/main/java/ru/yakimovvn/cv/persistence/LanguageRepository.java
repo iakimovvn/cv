@@ -12,5 +12,5 @@ import java.util.UUID;
  * cv
  **/
 public interface LanguageRepository extends JpaRepository<Language, UUID> {
-    List<Language> findAll();
+    List<Language> findAllByOrderByIndex();
 }

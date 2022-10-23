@@ -12,5 +12,5 @@ import java.util.UUID;
  * cv
  **/
 public interface EducationRepository extends JpaRepository<Education, UUID> {
-    List<Education> findAll();
+    List<Education> findAllByOrderByIndex();
 }

@@ -11,17 +11,19 @@ import java.util.UUID;
  **/
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @Table(name = "languages")
 public class Language {
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
     @Column(name = "id")
     private UUID id;
+    @Column(name = "index")
+    private Integer index;
     @Column(name = "language_name")
     private String language;
 }

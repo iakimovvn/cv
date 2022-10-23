@@ -11,5 +11,5 @@ import java.util.UUID;
  * cv
  **/
 public interface SkillRepository extends JpaRepository<Skill, UUID> {
-    List<Skill> findAll();
+    List<Skill> findAllByOrderByIndex();
 }

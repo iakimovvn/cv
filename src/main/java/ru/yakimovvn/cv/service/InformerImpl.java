@@ -46,31 +46,31 @@ public class InformerImpl implements Informer {
     @Override
     @Cacheable("contacts")
     public List<Contact> getContacts() {
-        return contactRepository.findAll();
+        return contactRepository.findAllByOrderByIndex();
     }
 
     @Override
     @Cacheable("jobs")
     public List<Job> getJobs() {
-        return jobRepository.findAll();
+        return jobRepository.findAllByOrderByIndex();
     }
 
     @Override
     @Cacheable("skills")
     public List<Skill> getSkills() {
-        return skillRepository.findAll();
+        return skillRepository.findAllByOrderByIndex();
     }
 
     @Override
     @Cacheable("languages")
     public List<Language> getLanguages() {
-        return languageRepository.findAll();
+        return languageRepository.findAllByOrderByIndex();
     }
 
     @Override
     @Cacheable("educations")
     public List<Education> getEducations() {
-        return educationRepository.findAll();
+        return educationRepository.findAllByOrderByIndex();
     }
 
     @Override
