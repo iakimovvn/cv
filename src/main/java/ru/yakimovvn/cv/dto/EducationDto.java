@@ -16,5 +16,6 @@ import java.util.UUID;
 @NoArgsConstructor
 public class EducationDto {
     private UUID id;
+    private Integer index;
     private String education;
 }

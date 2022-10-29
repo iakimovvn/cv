@@ -15,5 +15,6 @@ import java.util.UUID;
 @NoArgsConstructor
 public class SkillDto {
     private UUID id;
+    private Integer index;
     private String skillName;
 }

@@ -21,6 +21,7 @@ import java.util.UUID;
 public class JobDto implements Serializable {
     private UUID id;
     private String name;
+    private Integer index;
     private String title;
     private String date;
     private String description;

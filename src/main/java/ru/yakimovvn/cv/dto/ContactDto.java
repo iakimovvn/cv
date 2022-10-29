@@ -16,6 +16,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class ContactDto {
     private UUID id;
+    private Integer index;
     private String name;
     private String data;
 }

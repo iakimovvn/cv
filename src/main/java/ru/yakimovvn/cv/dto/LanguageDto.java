@@ -16,5 +16,6 @@ import java.util.UUID;
 @NoArgsConstructor
 public class LanguageDto {
     private UUID id;
+    private Integer index;
     private String language;
 }

@@ -75,7 +75,7 @@ insert into jobs(index, name, title, work_date, description, responsibilities) v
     'DEVELOPER',
     'January 2020 - August 2020',
     null,
-   'Writing macros that adapt the elar-context system for certain tasks.;Setting up and maintaining a context based on Tomcat with an environment (Elasticsearch, postgresql, OracleDb) on OS Linux.;Support, refinement of the Spring backend of the National Electronic Library.'
+   'Development of the Elar-context system (monolith).;Setting up and maintaining a context based on Tomcat with an environment (Elasticsearch, postgresql, OracleDb) on OS Linux.;Support, refinement of the Spring backend of the National Electronic Library.'
 );
 
 insert into jobs(index, name, title, work_date, description, responsibilities) values (
@@ -97,18 +97,17 @@ create table if not exists skills
 );
 
 insert into skills(index, skill_name) values (1, 'Java'),
-                                       (2, 'Python, bash'),
-                                       (3, 'Hadoop, Spark, Hive, Claudera'),
-                                       (4, 'Spring: Boot, Security,Web,JPA'),
-                                       (5, 'Jenkins, Ansible'),
-                                       (6, 'SQL, PostgreSQL, Flyway'),
-                                       (7, 'OOP, SOLID, REST, SOUP'),
-                                       (8, 'JUnit, Mockito '),
-                                       (9, 'Linux'),
-                                       (10, 'Docker'),
-                                       (11, 'Git, Maven, Jira, JProfiler'),
-                                       (12, 'Team management'),
-                                       (13, 'Task scheduling');
+                                       (2, 'Hadoop, Spark, Hive, Claudera'),
+                                       (3, 'Spring: Boot, Security, Web, JPA'),
+                                       (4, 'Jenkins, Ansible'),
+                                       (5, 'SQL, PostgreSQL, Flyway'),
+                                       (6, 'OOP, SOLID, REST, SOUP'),
+                                       (7, 'JUnit, Mockito '),
+                                       (8, 'Linux, bash, Python scripts'),
+                                       (9, 'Kubernetes, Docker'),
+                                       (10, 'Git, Maven, Jira, JProfiler'),
+                                       (11, 'Team management'),
+                                       (12, 'Task scheduling');
 
 
 create table if not exists languages
@@ -132,7 +131,7 @@ create table if not exists educations
     education varchar(255)
 );
 
-insert into educations(index, education) values (1, 'National Research Mordovian State University named after N.P. Ogarova, Saransk, <br/>Faculty of Electronic Engineering, <br/>Automated systems data processing and control. <br/>(2005 - 2010), Master');
+insert into educations(index, education) values (1, 'National Research Mordovian State University named after N.P. Ogarova, Saransk, Faculty of Electronic Engineering, Automated systems data processing and control. (2005 - 2010), Master');
 
 
 
