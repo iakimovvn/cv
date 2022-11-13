@@ -1,0 +1,15 @@
+[Unit]
+Description=cvapp
+After=syslog.target
+
+[Service]
+Type=simple
+User=cv_user
+Group=cv_user
+ExecStart=/opt/cvapp/bin/start.sh
+SuccessExitStatus=0
+StandardOutput=/opt/cvapp/cv.log
+StandardError=/opt/cvapp/cv.log
+
+[Install]
+WantedBy=multi-user.target
